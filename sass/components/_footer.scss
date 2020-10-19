@@ -1,0 +1,113 @@
+.footer{
+    
+    background-color: $footer-bg;
+    @include padding(160,20,20,20);
+    a{
+        color: $white;
+    }
+    .footer-logo img{
+        @media screen  and (max-width: #{$mobile}px) {
+            padding:5px;
+        }
+        padding:20px;
+    }
+    .footer-main{
+        @media screen  and (max-width: #{$mobile}px) {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                & > div{
+                   display: flex;
+                   margin: 1em 0;
+                    flex: 1 0 auto;
+                }
+                padding:5px;
+        }
+        display: flex;
+       & > div{
+           display: flex;
+           flex:0 1 25%;
+        }
+        padding:20px;
+        .footer-info{
+            @media screen  and (max-width: #{$mobile}px) {
+                
+            }
+            justify-content: flex-start;
+            align-items: flex-start;
+            @include padding( 0,0.3rem,0,0.3rem);
+            img{
+            min-width: 0.5rem;
+            @include margin(0.2rem,0,0,0);
+            }
+            p{
+               @include margin( 0, 0.5rem,0,0.5rem);
+            }
+        }
+        
+
+       
+        
+        
+        .footer-contact{
+            @media screen  and (max-width: #{$mobile}px) {
+               & > span{ @include margin( 1.5rem,0,0,0);}
+            }
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            img{
+            @include margin(0, 0.9rem,0,0.9rem);
+            }
+            span{
+                flex: 0 1 25%;
+                //flex-shrink: 0;
+                display: flex;
+                align-items: flex-start;
+                
+            }
+        }
+        .footer-pages{
+            @media screen  and (max-width: #{$mobile}px) {
+                @include margin( 0, 0.5rem,0,0.5rem);
+                a{                    
+                     @include margin( 0.5rem,0,0,0);
+                }
+            }
+            flex-direction: column;
+            flex-wrap: wrap;
+            min-height: 0;
+            justify-content: flex-start;
+            align-items: flex-start;
+            a{
+                min-height: 25%;
+            }
+        }
+        .footer-social{
+            @media screen  and (max-width: #{$mobile}px) {
+                justify-content: center;
+                align-items: center;  
+                    @include margin( 0.5rem,auto,0,auto);
+
+                a{
+                    
+                    img{
+                        min-width: 50%;
+                        @include margin( 1.5rem,0,0,0);
+                    }
+                }  
+            }
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: flex-start;  
+            a{
+                
+                img{
+                    max-width: 50%;
+                }
+            }          
+        }
+       
+    }
+}

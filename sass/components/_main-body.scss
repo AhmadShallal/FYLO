@@ -1,0 +1,172 @@
+body , *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body > *{
+    font-family: $font-fam-body;
+    font-size: $font-size-body;
+    color: $white;
+    background-color: $main-bg;
+}
+
+h1,h2,h3,h4,h5,h6,.header nav,.intro a,.signup a,.connect a{
+    font-family: $font-fam-headings;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+main section{
+    @include padding(40,20,40,20);
+}
+
+
+
+.intro-section{
+    background-color: $intro-email-bg;
+    
+   
+        img,h2,p{
+            @include margin(20,0,40,0);
+            @include padding(0,40,0,40);
+        }
+        @include padding(20,30,40,30);
+      
+       
+        
+        img{
+            @extend %responsive-img;
+        }
+        h2{}
+        p{
+           
+        }
+        a{
+            @extend %button;
+            padding: 1em 4em;
+            @include margin(20,0,40,0);
+        }
+    
+    
+}
+
+.features{
+    @include margin(20,40,20,40);
+    .feature-item{
+        @include margin(10,0,20,0);
+        .icon,p{
+            @include margin(10,0,10,0);
+        }
+       
+        .icon{
+            @extend %responsive-img;
+        }
+        p{
+            padding: 0 20%;
+            @extend .text-center;
+        }
+    }
+}
+
+.connect{
+    @include margin(40,0,40,0);
+    .stay-productive{
+        img{
+            @extend %responsive-img;
+        }
+    }
+    .how{
+        align-self: center;
+        @include padding(20,40,20,40);
+        &>*{
+           @include padding(10,20,10,20); 
+        }
+        h2{
+            font-weight: $heavy;
+        }
+        a{
+            color: $cyan;
+            text-decoration: underline;
+        }
+    }
+}
+
+.testimonials{
+    
+    
+    .row{
+       justify-content: space-between;
+       align-content: center;
+    }
+    .testimonial{
+        box-sizing: content-box;
+        font-size: 0.9rem;
+        background-color: $testimonials-bg;
+        margin-bottom: 10px;
+        padding: 0.5rem 1rem;
+        border: 0.9rem solid rgba(32, 42, 60, 0.6);
+        border-radius: 5px;
+        p{}
+        .person{
+            font-size: 0.7rem;
+            padding: 0.2rem;
+            margin: 0.7em auto auto 0;
+            .thumbnail{
+                max-width: 10%;
+                display: block;
+                border-radius: 50%;
+                float: left;
+                margin: 0.4rem;
+            }
+            .name{
+                display: inline-block;
+                padding-top: 0.2em;
+            }
+            .job{
+                display: inline-block;
+                
+            }
+        }
+    }
+}
+
+.signup{
+
+    
+    
+    
+
+    h2{}
+    p{
+        margin: 2em auto;
+    }
+    input{
+        padding: 0.5rem 8rem 0.5rem 2rem;
+        margin: 0.2rem ;
+        border: none;
+        border-radius: 2rem;
+    }
+    button{
+        @extend %button;
+        border: none;
+    }
+    
+    .container__row{
+        
+    }
+    .get-started{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 0.4rem;
+        @include padding(40,20,40,20);
+        background-color: $intro-email-bg;
+        -webkit-transform: translate(0%,50%);
+        -ms-transform: translate(0%,50%);
+        transform: translate(0%,50%);
+    }
+}

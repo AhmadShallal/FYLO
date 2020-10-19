@@ -1,0 +1,44 @@
+// import google fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+/*
+/
+//  Variables //
+/
+*/
+
+// breakpoints
+
+$mobile: 375;
+$desktop: 1440;
+
+// colors
+
+
+//  backgrounds
+
+$intro-email-bg:hsl(217, 28%, 15%);
+$main-bg: hsl(218, 28%, 13%);
+$footer-bg: hsl(216, 53%, 9%);
+$testimonials-bg: hsl(219, 30%, 18%);
+
+// accent
+
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+
+// neutral
+
+$white: hsl(0, 0%, 100%);
+
+
+// typography
+
+$font-size-body: 14px;
+
+$light: 400;
+
+$heavy: 700;
+
+
+$font-fam-body:'Open Sans', sans-serif;
+$font-fam-headings: 'Raleway', sans-serif;

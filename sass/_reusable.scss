@@ -1,0 +1,114 @@
+/*
+    Reusable classes
+*/
+
+.center-center{
+  justify-content: center;
+  align-content: center;
+}
+
+%responsive-img{
+    flex-grow: 0;
+    //display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    }
+
+%clearfix {
+    *zoom: 1;
+    &:before, 
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.max-width-50{
+  max-width: 50%;
+}
+
+// alignment helpers
+
+.text-center{
+  text-align: center;
+}
+
+
+
+// button class
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+%button{
+    padding: 0.5rem 1.8rem;
+    margin: 0.2rem auto;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    font-family: $font-fam-headings;
+    font-weight: $heavy;
+    font-size: $font-size-body;
+    cursor: pointer;
+    color:$white ;
+    background-color:$cyan;
+    @include transition(background-color .5s ease);
+    &:hover{
+        background-color:$blue;
+    }
+}
+
+
+// spacing and sizing mixins
+
+@function calculateRem($size) {
+  $remSize: $size  / 14;
+  @return $remSize + rem;
+}
+
+//Padding mixin
+@mixin padding($top, $right, $bottom, $left) {
+  //Will be overridden if browser supports rem  
+  padding-top: $top +px;
+  padding-right: $right +px;
+  padding-bottom: $bottom +px;
+  padding-left: $left +px;
+  // padding in rem
+  padding-top: calculateRem($top);
+  padding-right: calculateRem($right);
+  padding-bottom: calculateRem($bottom);
+  padding-left: calculateRem($left);
+}
+//Margin mixin
+@mixin margin($top, $right, $bottom, $left) {
+  //Will be overridden if browser supports rem
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+  // padding in rem
+  margin-top: calculateRem($top);
+  margin-right: calculateRem($right);
+  margin-bottom: calculateRem($bottom);
+  margin-left: calculateRem($left);
+}
+
+// color schemes
+
+
